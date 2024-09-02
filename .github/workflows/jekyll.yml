@@ -17,12 +17,6 @@ jobs:
       with:
         ruby-version: '3.0'  # 选择与 Gemfile 兼容的 Ruby 版本
 
-    - name: Clear Bundler cache
-      run: |
-        bundle clean --force
-        rm -rf .bundle/
-        rm -rf vendor/cache/
-
     - name: Install dependencies
       run: |
         gem install bundler
