@@ -22,11 +22,13 @@ jobs:
         gem install bundler
         bundle install
 
+    - name: Check Jekyll version
+      run: bundle exec jekyll -v  # 这将输出正在使用的 Jekyll 版本以确认
+
     - name: Build the site
-      run: bundle exec jekyll build
+      run: bundle exec rake generate  # 使用 Rakefile 中的 build 任务来构建站点
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      run: bundle exec rake publish  # 使用 Rakefile 中的 publish 任务来发布站点
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 确保在发布时使用 GitHub Token 进行身份验证

@@ -92,7 +92,7 @@ scholar:
 
   bibliography_list_attributes:
     reversed: "reversed"
-
+    
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -100,3 +100,4 @@ exclude:
   - switch_theme.sh
   - tags
   - Rakefile
+
