@@ -26,7 +26,7 @@ jobs:
       run: bundle exec jekyll -v  # 这将输出正在使用的 Jekyll 版本以确认
 
     - name: Build the site
-      run: bundle exec rake build  # 使用 Rakefile 中的 build 任务来构建站点
+      run: bundle exec rake generate  # 使用 Rakefile 中的 build 任务来构建站点
 
     - name: Deploy to GitHub Pages
       run: bundle exec rake publish  # 使用 Rakefile 中的 publish 任务来发布站点
