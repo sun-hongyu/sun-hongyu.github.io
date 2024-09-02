@@ -4,7 +4,7 @@ title_bottom: Hongyu Sun
 email: hsun2@utep.edu
 description: Sun Research Group
 baseurl: ""
-url: ""
+url: "https://sun-hongyu.github.io"
 
 # theme: minimal-mistakes-jekyll
 # minimal_mistakes_skin: "aqua"
@@ -65,7 +65,8 @@ kramdown:
   enable_coderay: false
   parse_block_html: true # default for kramdown is false. This will enable using Markdown links
 
-plugins: ["jekyll/scholar"]
+plugins:
+  - jekyll-scholar
 
 scholar:
   last_name: Sun
