@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'github-pages', group: :jekyll_plugins
+gem "jekyll", "4.3.3"
 gem "kramdown-parser-gfm"
-gem 'jekyll-scholar', '~> 6.0'
+gem 'jekyll-scholar'
+gem "webrick", "~> 1.7"
 gem "csv"
 gem "base64"
 gem "bigdecimal"
