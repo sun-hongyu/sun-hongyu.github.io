@@ -1,3 +1,4 @@
+
 @phdthesis{sun2022learning,
   title={Learning Seismic Waves for Imaging the Earth},
   author={Sun, Hongyu},
@@ -147,7 +148,7 @@
 	doi = {10.1190/segam2021-3594981.1},
 	language = {en},
 	urldate = {2024-08-08},
-	booktitle = {First {International} {Meeting} for {Applied} {Geoscience} \& {Energy} {Expanded} {Abstracts}},
+	booktitle = {First {International} {Meeting} for {Applied} {Geoscience} \& {Energy}, {Expanded} {Abstracts}},
 	publisher = {Society of Exploration Geophysicists},
 	author = {Sun, Hongyu and Demanet, Laurent},
 	month = sep,
@@ -205,6 +206,58 @@
 	abstract = {The lack of the low frequency information and good initial model can seriously affect the success of full waveform inversion (FWI) due to the inherent cycle skipping problem. Reasonable and reliable low frequency extrapolation is in principle the most direct way to solve this problem. In this paper, we propose a deep-learning-based bandwidth extension method by considering low frequency extrapolation as a regression problem. The Deep Neural Networks (DNNs) are trained to automatically extrapolate the low frequencies without preprocessing steps. The band-limited recordings are the inputs of the DNNs and, in our numerical experiments, the pretrained neural networks can predict the continuous-valued seismograms in the unobserved low frequency band. For the numerical experiments considered here, it is possible to find the amplitude and phase correlations among different frequency components by training the DNNs with enough data samples, and extrapolate the low frequencies from the band-limited seismic records trace by trace. The synthetic example shows that our approach is not subject to the structural limitations of other methods to bandwidth extension, and seems to offer a tantalizing solution to the problem of properly initializing FWI.},
 }
 
+
+@inproceedings{sun_vsnet_2025,
+	address = {Houston, Texas},
+	title = {{VSNet}: {Deep}-learning inversion of velocity structures and source locations with passive seismic data},
+	doi = {10.1190/image2025-4316895.1},
+	language = {en},
+	urldate = {2025-12-01},
+	booktitle = {Fifth International Meeting for Applied Geoscience & Energy, Expanded Abstracts},
+	publisher = {Society of Exploration Geophysicists},
+	author = {Sun, Hongyu},
+	month = dec,
+	year = {2025},
+	pages = {1--6},
+	file = {Sun2025IMAGE.pdf},
+	abstract = {Jointly determining source locations and velocity structures is essential in passive seismic inversion due to the coupling between hypocenters and velocity structures. Traditional methods, including travel-time tomography and full-waveform inversion (FWI), face challenges due to their sensitivity to initial models and high computational costs. Recently, deep learning has emerged as a promising alternative, offering improved efficiency and accuracy in seismic inversion. However, most existing data-driven FWI studies focus on active-source data, where the source information is known, making their direct application to passive seismic data challenging. Here I propose VSNet, a multi-task learning framework for the joint inversion of velocity structures and source locations with passive seismic data. VSNet consists of two separate sub-networks: VNet for velocity inversion and SNet for source localization, which are updated simultaneously through a soft-sharing mechanism. Using a passive seismic dataset simulated on the OpenFWI Kimberlina-CO2 velocity models, I demonstrate that VSNet can directly estimate both velocity structures and source locations from full-waveform data. The results show that VSNet achieves high accuracy in both tasks while being computationally efficient once trained, highlighting the potential of deep learning in passive seismic inversion.},
+}
+
+@inproceedings{sun_seismic_monitoring_seg_2025,
+	address = {Houston, Texas},
+	title = {Advancing seismic monitoring with operator learning},
+	doi = {10.1190/image2025-w11-02.1},
+	language = {en},
+	urldate = {2025-12-01},
+	booktitle = {Fifth International Meeting for Applied Geoscience & Energy, Post-Convention Workshop W-11: Machine Learning in Geosciences in the Age of Generative AI, Expanded Abstracts},
+	publisher = {Society of Exploration Geophysicists},
+	author = {Sun, Hongyu},
+	month = dec,
+	year = {2025},
+	pages = {1--5},
+	file = {Sun2025IMAGE_workshop.pdf},
+	abstract = {Seismic monitoring is essential for understanding earthquake processes and mitigating associated hazards. Traditional deep learning methods in seismology often rely on single-station inputs or fixed seismic acquisition geometries, limiting their robustness and scalability in dynamic seismic monitoring systems. Recent developments in operator learning have enabled new approaches to seismic monitoring, which address these limitations by leveraging the full spatiotemporal information contained in multi-station waveform data and generalizing across diverse seismic network configurations. This work reviews three recent contributions that illustrate these approaches: (1) the Phase Neural Operator (PhaseNO), an algorithm for multi-station picking of seismic arrivals; (2) the Location Neural Operator (LocNO), a full-waveform earthquake location algorithm; and (3) an accelerated correlation-based time-reversal imaging method that uses the Fourier Neural Operator for efficient wavefield backpropagation. Together, these methods demonstrate that operator learning can enhance the accuracy, adaptability, and computational efficiency of seismic monitoring across varying geologic settings and network configurations.},
+}
+
+
+@inproceedings{wu_seg_2025,
+	address = {Houston, Texas},
+	title = {An adaptive migration image-based CNN-based full waveform inversion (AIC-FWI)},
+	doi = {10.1190/image2025-4316803.1},
+	language = {en},
+	urldate = {2025-12-01},
+	booktitle = {Fifth International Meeting for Applied Geoscience & Energy, Expanded Abstracts},
+	publisher = {Society of Exploration Geophysicists},
+	author = {Wu, Yulang and Sun, Hongyu and Tian, Yapeng and McMechan, George A. and Jing Zhou},
+	month = dec,
+	year = {2025},
+	pages = {1--5},
+	file = {Wu2025IMAGE.pdf},
+	abstract = {We propose adaptive migration image-based CNN-FWI (AIC-FWI), an updated version of adaptive-feedback CNN-based reflection-waveform inversion (CNN-RWI), which trains a convolutional neural network (CNN) using the original velocity model and RTM image to predict the true velocity model. Unlike CNN-RWI, which requires high-resolution prior models, AIC-FWI captures features from migration images, making it suitable for inversion with a 1D velocity model. AIC-FWI offers several advantages: 1) no data fitting required, with higher-frequency data preferred; 2) self-supervised learning using pseudo-labels from the latest predicted models; 3) computational efficiency with fast convergence and scalability on GPUs/TPUs/CPU clusters. Synthetic tests on the Marmousi2 model show AIC-FWI can accurately predict velocity models from 1D initial models.},
+	}
+
+	
+
 @inproceedings{sun_3d_2016,
 	address = {Online,},
 	title = {{3D} {Anisotropic} {Elastic} {Wave} {Illumination} and {Target}-oriented {Visibilty} {Analysis}},
@@ -231,3 +284,18 @@
 	abstract = {Full waveform inversion has become more and more popular in both academic research and commercial production in recent years. However, the lack of low frequency and maximum offset limited its field application. In this study a new FWI method taking adaptive illumination compensation into consideration is purposed to solve the limited maximum offset problem. Two-way wave equation illumination analysis method is applied to adaptively compensate and balance the gradients. The synthetic data test shows that our method can enhance the FWI iteration converge stability in poor illuminated area and provide better image at the same time.},
 }
 
+@article{sun2025locno,
+  title   = {{Operator Learning for Earthquake Location: Methodology and Application to Out-of-Network Events in the Mendocino Triple Junction}},
+  author  = {Sun, Hongyu},
+  journal = {Bulletin of the Seismological Society of America},
+  year    = {2025},
+  volume  = {116},
+  number  = {1},
+  pages   = {205--224},
+  issn    = {1943-3573, 0037-1106},
+  doi     = {10.1785/0120250018},
+  abstract = {Accurate location of earthquakes outside the boundaries of seismic networks is a well-known challenge due to limited azimuthal coverage. Offshore earthquakes, particularly along the Mendocino Transform fault, pose considerable risks to nearby communities. However, the lack of permanent stations in marine environments hinders accurate earthquake location. This study investigates the feasibility of locating offshore earthquakes around the Mendocino Triple Junction (MTJ) using advanced deep learning techniques. We propose the location neural operator (LocNO), an innovative operator learning framework that directly estimates earthquake locations from full-waveform data, even under sparse and nonideal network conditions. The approach integrates the Fourier neural operator and graph neural operator to capture the intricate spatiotemporal dependencies of seismic wavefields across stations and to estimate a spatial pseudoprobability density function over earthquake source coordinates (easting, northing, and depth). Trained on historical seismicity and simulated sparse network scenarios, LocNO generalizes across varying network geometries and provides robust estimates for out‐of‐network events, with the mean absolute errors on the order of 10 km horizontally and 4 km in depth. A case study of the 2017 Mw 5.7 earthquake sequence, 218 km west of Ferndale, California, demonstrates that LocNO yields robust locations for out‐of‐network earthquakes newly detected by the phase neural operator, even when recorded by only a few stations with large azimuthal gaps. These results open a new avenue for investigating MTJ seismotectonics using deep-learning-enhanced earthquake catalogs.},
+  language = {en},
+  urldate  = {2025-10-15},
+  file = {Sun2025BSSA.pdf},
+}
